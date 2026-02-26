@@ -1,0 +1,19 @@
+======================================================================
+MCTS推理详细结果
+======================================================================
+
+问题:
+On $\triangle ABC$ points $A,D,E$, and $B$ lie that order on side $\overline{AB}$ with $AD=4, DE=16$, and $EB=8$. Points $A,F,G$, and $C$ lie in that order on side $\overline{AC}$ with $AF=13, FG=52$, and $GC=26$. Let $M$ be the reflection of $D$ through $F$, and let $N$ be the reflection of $G$ through $E$. Quadrilateral $DEGF$ has area 288. Find the area of heptagon $AFNBCEM$.
+
+正确答案: 588
+
+======================================================================
+直接回答结果
+======================================================================
+答案: 588
+正确: ✓
+
+======================================================================
+MCTS结果
+======================================================================
+MCTS搜索已跳过 (Baseline已答对)
