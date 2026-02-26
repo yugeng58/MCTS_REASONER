@@ -141,19 +141,9 @@ Correctness is determined by comparing extracted numeric answers after normaliza
 
 **Adjusted accuracy** (correcting the false negative on Q20): Baseline 24/30 (80.0%), MCTS 29/30 (96.7%).
 
-The results demonstrate that MCTS-Stepwise Reasoning effectively corrects a majority of initially incorrect answers with a modest computational budget. The baseline-first strategy avoids unnecessary search on already-correct problems, saving significant cost: only 7 out of 30 problems required MCTS, yet overall accuracy improved by 16.6 percentage points (raw) or 16.7 points (adjusted).
+The results demonstrate that MCTS-Stepwise Reasoning effectively corrects a majority of initially incorrect answers with a modest computational budget.
 
-### 4.3 Analysis of Correction Cases
-
-We examined the five problems where MCTS turned a wrong baseline into correct. In each case, the baseline answer contained a critical error (e.g., miscalculation, missing step, logical flaw). The MCTS search, guided by self-refine from the initial wrong answer's critique, was able to discover a corrected reasoning path. For example:
-
-- **Problem 12**: Baseline misapplied a formula; MCTS generated a revised solution after incorporating a critique about the incorrect assumption, leading to the correct numeric answer.
-
-- **Problem 24**: Baseline gave an answer with units attached; MCTS produced a unitless numeric answer that matched the expected format.
-
-The two failures where MCTS did not correct the error were due to persistent conceptual misunderstandings that the self-refine process could not overcome within the iteration limit.
-
-### 4.4 Efficiency
+### 4.3 Efficiency
 
 Total API calls (256) and tokens (5.1M) are moderate considering 30 problems and 12 MCTS iterations each for 7 problems. The average time per problem (246 seconds) is dominated by API latency; with faster inference or local models, the overhead would be lower.
 
