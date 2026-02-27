@@ -139,8 +139,6 @@ Correctness is determined by comparing extracted numeric answers after normaliza
 | Total tokens | 5,121,029 |
 | Average time per problem | 246 s |
 
-**Adjusted accuracy** (correcting the false negative on Q20): Baseline 24/30 (80.0%), MCTS 29/30 (96.7%).
-
 The results demonstrate that MCTS-Stepwise Reasoning effectively corrects a majority of initially incorrect answers with a modest computational budget.
 
 ### 4.3 Efficiency
